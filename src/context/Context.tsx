@@ -23,8 +23,13 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
     return "";
   };
 
+  const updateOptions = () => {
+    // #TODO Implementing the update options function setOptions state
+    console.log("updateOptions");
+  };
+
   return (
-    <AppContext.Provider value={{ options, generatePassword }}>
+    <AppContext.Provider value={{ options, generatePassword, updateOptions }}>
       {children}
     </AppContext.Provider>
   );

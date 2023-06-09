@@ -8,4 +8,5 @@ export interface IOptions {
 export type AppContextType = {
   options: IOptions;
   generatePassword: () => string;
+  updateOptions: () => void;
 };
