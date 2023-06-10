@@ -5,7 +5,9 @@ import { Title } from "../../components";
 export const HomePage: React.FC = () => {
   return (
     <main className="home-container">
-      <Title msg="Password Generator" />
+      <div className="home-container__wrapper">
+        <Title msg="Password Generator" />
+      </div>
     </main>
   );
 };
