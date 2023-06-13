@@ -18,6 +18,7 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
   });
 
   const [password, setPassword] = useState("");
+  const [passwordLength, setPasswordLength] = useState(6);
 
   const generatePassword = () => {
     // #TODO implementing the Generate password function.
@@ -30,7 +31,15 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={{ options, generatePassword, updateOptions }}>
+    <AppContext.Provider
+      value={{
+        options,
+        generatePassword,
+        updateOptions,
+        password,
+        passwordLength,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
