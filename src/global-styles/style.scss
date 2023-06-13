@@ -6,8 +6,9 @@
 @import "styles/fonts.scss";
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--color-primary);
+  font-family: "Manrope", sans-serif;
+  color: var(--color-black);
+  background: var(--color-background);
 }
 
 p {

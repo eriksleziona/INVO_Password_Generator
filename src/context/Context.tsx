@@ -1,5 +1,4 @@
-import * as React from "react";
-import {
+import React, {
   useContext,
   createContext,
   useState,
@@ -17,6 +16,8 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
     includeUpper: false,
     includeLower: false,
   });
+
+  const [password, setPassword] = useState("");
 
   const generatePassword = () => {
     // #TODO implementing the Generate password function.

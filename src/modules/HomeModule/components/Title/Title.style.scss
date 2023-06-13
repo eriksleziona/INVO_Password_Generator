@@ -1,5 +1,8 @@
+@import "../../../../global-styles/Mixins/font.mixins.scss";
+
 .title-container {
   & &__title {
+    @include title-font-mixins;
     margin: 0;
   }
 }
