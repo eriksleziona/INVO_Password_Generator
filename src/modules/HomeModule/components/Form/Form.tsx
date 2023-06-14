@@ -1,10 +1,11 @@
 import React from "react";
 import { useGlobalContext } from "@/context";
 import { AppContextType } from "@/context/Context.types";
+import { CheckBoxes } from "../CheckBoxes/CheckBoxes";
+
 import "./Form.styles.scss";
 export const Form: React.FC = () => {
-  const { options, passwordLength } = useGlobalContext() as AppContextType;
-  console.log(options);
+  const { passwordLength } = useGlobalContext() as AppContextType;
   return (
     <div className="form-container">
       <form className="form-container__form">
@@ -19,9 +20,7 @@ export const Form: React.FC = () => {
           </div>
           <input className="form-container__slider" type="range" />
         </div>
-        <div className="form-container__checkboxes">
-          {/* #TODO Setting the checkboxes Groups and connect to the updateOptions function */}
-        </div>
+        <CheckBoxes />
       </form>
     </div>
   );
