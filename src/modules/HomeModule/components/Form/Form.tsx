@@ -1,22 +1,27 @@
+import React from "react";
 import { useGlobalContext } from "@/context";
 import { AppContextType } from "@/context/Context.types";
-import React from "react";
-
+import "./Form.styles.scss";
 export const Form: React.FC = () => {
-  const { options } = useGlobalContext() as AppContextType;
+  const { options, passwordLength } = useGlobalContext() as AppContextType;
   console.log(options);
   return (
     <div className="form-container">
       <form className="form-container__form">
         <div className="form-container__range">
           <div className="form-container__label">
-            <span>Character Length</span>
-            {/*  #TODO Implement dynamic length control */}
-            <span>6</span>
+            <span className="form-container__label-title">
+              Character Length
+            </span>
+            <span className="form-container__label-length">
+              {passwordLength}
+            </span>
           </div>
-          <input type="range" />
+          <input className="form-container__slider" type="range" />
         </div>
-        <div className="form-container__checkboxes"></div>
+        <div className="form-container__checkboxes">
+          {/* #TODO Setting the checkboxes Groups and connect to the updateOptions function */}
+        </div>
       </form>
     </div>
   );

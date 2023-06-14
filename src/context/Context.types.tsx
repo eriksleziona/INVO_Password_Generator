@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IOptions {
   includeSymbols: boolean;
   includeNumbers: boolean;
@@ -9,6 +11,7 @@ export type AppContextType = {
   options: IOptions;
   password: string;
   passwordLength: number;
-  generatePassword: () => string;
-  updateOptions: () => void;
+  generatePassword: (options: IOptions, length: number) => string;
+  updateOptions: (options: IOptions) => void;
+  setPasswordLength: React.Dispatch<React.SetStateAction<number>>;
 };
