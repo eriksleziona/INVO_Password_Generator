@@ -1,0 +1,23 @@
+@import "/src/global-styles/Mixins/font.mixins.scss";
+.checkboxes-container {
+  padding-top: 28px;
+
+  & &__row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  & &__row:not(:first-child) {
+    margin-top: 14px;
+  }
+
+  & &__checkbox {
+    /* #TODO Implement Custom checkboxes */
+    display: block;
+  }
+
+  & &__label {
+    @include checkboxes-fonts-mixin;
+  }
+}

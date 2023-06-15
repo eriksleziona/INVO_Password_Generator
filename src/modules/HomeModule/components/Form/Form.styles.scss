@@ -21,6 +21,7 @@
   }
 
   & &__label-title {
+    @include secondary-title-font-mixin;
     align-items: center;
   }
 

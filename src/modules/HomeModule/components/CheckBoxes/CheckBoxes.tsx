@@ -2,18 +2,19 @@ import { useGlobalContext } from "@/context";
 import React from "react";
 import "./CheckBoxes.style.scss";
 import { AppContextType } from "@/context/Context.types";
+import { IUpdateOpt } from "@/context/Context.types";
 
 export const CheckBoxes: React.FC = () => {
-  const { options } = useGlobalContext() as AppContextType;
+  const { options, updateOptions } = useGlobalContext() as AppContextType;
   const { includeLower, includeNumbers, includeSymbols, includeUpper } =
     options;
   return (
     <div className="checkboxes-container">
-      {/* #TODO Setting the checkboxes Groups and connect to the updateOptions function */}
       <div className="checkboxes-container__row">
         <input
           type="checkbox"
           checked={includeUpper}
+          onChange={() => updateOptions({ includeUpper: !includeUpper })}
           name="upper"
           id="upper"
           className=" checkboxes-container__checkbox"
@@ -26,6 +27,7 @@ export const CheckBoxes: React.FC = () => {
         <input
           type="checkbox"
           checked={includeLower}
+          onChange={() => updateOptions({ includeLower: !includeLower })}
           name="upper"
           id="upper"
           className=" checkboxes-container__checkbox"
@@ -38,6 +40,7 @@ export const CheckBoxes: React.FC = () => {
         <input
           type="checkbox"
           checked={includeNumbers}
+          onChange={() => updateOptions({ includeNumbers: !includeNumbers })}
           name="upper"
           id="upper"
           className=" checkboxes-container__checkbox"
@@ -45,18 +48,19 @@ export const CheckBoxes: React.FC = () => {
         <label htmlFor="upper" className="checkboxes-container__label">
           Include Numbers
         </label>
-        <div className="checkboxes-container__row">
-          <input
-            type="checkbox"
-            checked={includeSymbols}
-            name="upper"
-            id="upper"
-            className=" checkboxes-container__checkbox"
-          />
-          <label htmlFor="upper" className="checkboxes-container__label">
-            Include Symbols
-          </label>
-        </div>
+      </div>
+      <div className="checkboxes-container__row">
+        <input
+          type="checkbox"
+          checked={includeSymbols}
+          onChange={() => updateOptions({ includeSymbols: !includeSymbols })}
+          name="upper"
+          id="upper"
+          className=" checkboxes-container__checkbox"
+        />
+        <label htmlFor="upper" className="checkboxes-container__label">
+          Include Symbols
+        </label>
       </div>
     </div>
   );

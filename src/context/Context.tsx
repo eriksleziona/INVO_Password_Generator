@@ -4,8 +4,9 @@ import React, {
   useState,
   FC,
   PropsWithChildren,
+  Key,
 } from "react";
-import { AppContextType, IOptions } from "./Context.types";
+import { AppContextType, IOptions, IUpdateOpt } from "./Context.types";
 
 const AppContext = createContext<AppContextType | null>(null);
 
@@ -27,9 +28,9 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
     return "";
   };
 
-  const updateOptions = () => {
-    // #TODO Implementing the update options function setOptions state
-    console.log("updateOptions");
+  const updateOptions = (updateOpt: IUpdateOpt) => {
+    const newOptions = { ...options, ...updateOpt };
+    setOptions(newOptions);
   };
 
   return (

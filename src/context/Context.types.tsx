@@ -7,11 +7,18 @@ export interface IOptions {
   includeLower: boolean;
 }
 
+export interface IUpdateOpt {
+  includeUpper?: boolean;
+  includeSymbols?: boolean;
+  includeLower?: boolean;
+  includeNumbers?: boolean;
+}
+
 export type AppContextType = {
   options: IOptions;
   password: string;
   passwordLength: number;
   generatePassword: (options: IOptions, length: number) => string;
-  updateOptions: (options: IOptions) => void;
+  updateOptions: (updateOpt: IUpdateOpt) => void;
   setPasswordLength: React.Dispatch<React.SetStateAction<number>>;
 };
