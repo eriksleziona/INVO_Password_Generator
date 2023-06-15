@@ -6,6 +6,7 @@
 @import "styles/fonts.scss";
 
 body {
+  max-width: 1440px;
   font-family: "Manrope", sans-serif;
   color: var(--color-black);
   background: var(--color-background);

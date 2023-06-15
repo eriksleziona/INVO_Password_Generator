@@ -17,6 +17,10 @@
     display: block;
   }
 
+  & &__checkbox:hover {
+    cursor: pointer;
+  }
+
   & &__label {
     @include checkboxes-fonts-mixin;
   }

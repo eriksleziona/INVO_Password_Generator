@@ -2,7 +2,6 @@ import { useGlobalContext } from "@/context";
 import React from "react";
 import "./CheckBoxes.style.scss";
 import { AppContextType } from "@/context/Context.types";
-import { IUpdateOpt } from "@/context/Context.types";
 
 export const CheckBoxes: React.FC = () => {
   const { options, updateOptions } = useGlobalContext() as AppContextType;

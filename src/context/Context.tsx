@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {
   useContext,
   createContext,
   useState,
   FC,
   PropsWithChildren,
-  Key,
 } from "react";
 import { AppContextType, IOptions, IUpdateOpt } from "./Context.types";
 
