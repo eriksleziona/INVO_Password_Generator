@@ -3,7 +3,7 @@ import "./ShowStrength.style.scss";
 import { useGlobalContext } from "@/context";
 import { AppContextType } from "@/context/Context.types";
 
-const passMessages = {
+const strengthMessages = {
   1: "Low password strength",
   2: "Low password strength",
   3: "Average password strength",
@@ -21,7 +21,9 @@ export const ShowStrength: React.FC = () => {
       <div className="strength-container__label">
         <h4 className="strength-container__title">Strength</h4>
         {/* #TODO Set the password power string dynamic */}
-        <span className="strength-container__message">{passMessages[1]}</span>
+        <span className="strength-container__message">
+          {strengthMessages[1]}
+        </span>
       </div>
       <div className="strength-container__power">
         <div className="strength-container__item"></div>

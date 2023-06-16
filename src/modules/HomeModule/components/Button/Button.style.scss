@@ -1,0 +1,20 @@
+@import "/src/global-styles/Mixins/font.mixins.scss";
+
+.btn {
+  margin-top: 23px;
+  border: none;
+  padding: 18px 140px;
+  background: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  svg {
+    font-size: 20px;
+  }
+  & &__text {
+    @include checkboxes-fonts-mixin;
+    color: var(--color-white);
+    margin-left: 10px;
+  }
+}
