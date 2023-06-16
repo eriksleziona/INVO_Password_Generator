@@ -1,0 +1,30 @@
+@import "/src//global-styles/Mixins/font.mixins.scss";
+
+.strength-container {
+  margin-top: 1.5rem;
+  background: var(--color-grey);
+  padding: 18px 24px 16px 24px;
+  & &__label {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & &__title {
+    @include secondary-title-font-mixin;
+  }
+
+  & &__message {
+    @include checkboxes-fonts-mixin;
+  }
+
+  & &__power {
+    display: flex;
+    justify-content: space-between;
+  }
+  & &__item {
+    border-radius: 90px;
+    width: 85.25px;
+    height: 6px;
+    background: var(--color-slider);
+  }
+}

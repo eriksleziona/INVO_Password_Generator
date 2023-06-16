@@ -14,7 +14,6 @@
 
   & &__checkbox {
     /* #TODO Implement Custom checkboxes */
-    display: block;
   }
 
   & &__checkbox:hover {
@@ -23,5 +22,9 @@
 
   & &__label {
     @include checkboxes-fonts-mixin;
+  }
+
+  & &__label:hover {
+    cursor: pointer;
   }
 }

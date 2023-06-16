@@ -27,11 +27,11 @@ export const CheckBoxes: React.FC = () => {
           type="checkbox"
           checked={includeLower}
           onChange={() => updateOptions({ includeLower: !includeLower })}
-          name="upper"
-          id="upper"
+          name="lower"
+          id="lower"
           className=" checkboxes-container__checkbox"
         />
-        <label htmlFor="upper" className="checkboxes-container__label">
+        <label htmlFor="lower" className="checkboxes-container__label">
           Include Lowercase Letter
         </label>
       </div>
@@ -40,11 +40,11 @@ export const CheckBoxes: React.FC = () => {
           type="checkbox"
           checked={includeNumbers}
           onChange={() => updateOptions({ includeNumbers: !includeNumbers })}
-          name="upper"
-          id="upper"
+          name="number"
+          id="number"
           className=" checkboxes-container__checkbox"
         />
-        <label htmlFor="upper" className="checkboxes-container__label">
+        <label htmlFor="number" className="checkboxes-container__label">
           Include Numbers
         </label>
       </div>
@@ -53,11 +53,11 @@ export const CheckBoxes: React.FC = () => {
           type="checkbox"
           checked={includeSymbols}
           onChange={() => updateOptions({ includeSymbols: !includeSymbols })}
-          name="upper"
-          id="upper"
+          name="symbols"
+          id="symbols"
           className=" checkboxes-container__checkbox"
         />
-        <label htmlFor="upper" className="checkboxes-container__label">
+        <label htmlFor="symbols" className="checkboxes-container__label">
           Include Symbols
         </label>
       </div>

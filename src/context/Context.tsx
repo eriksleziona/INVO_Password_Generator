@@ -18,7 +18,7 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
     includeLower: false,
   });
 
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("PTx1O234DSR%");
   const [passwordLength, setPasswordLength] = useState(6);
 
   const generatePassword = (options: IOptions, length: number) => {

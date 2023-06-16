@@ -1,6 +1,10 @@
 import React from "react";
 
-import { CheckBoxes, Slider } from "@/modules/HomeModule/components";
+import {
+  CheckBoxes,
+  ShowStrength,
+  Slider,
+} from "@/modules/HomeModule/components";
 
 import "./Form.styles.scss";
 export const Form: React.FC = () => {
@@ -9,6 +13,7 @@ export const Form: React.FC = () => {
       <form className="form-container__form">
         <Slider />
         <CheckBoxes />
+        <ShowStrength />
       </form>
     </div>
   );
