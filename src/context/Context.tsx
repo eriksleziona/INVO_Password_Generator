@@ -15,6 +15,7 @@ import {
 } from "@/utils/characters";
 import { AppContextType, IOptions, IUpdateOpt } from "./Context.types";
 import { randomInt } from "@/utils";
+import { toast } from "react-toastify";
 const AppContext = createContext<AppContextType | null>(null);
 
 export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
@@ -25,7 +26,7 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
     includeLower: true,
   });
 
-  const [password, setPassword] = useState("PTx1O234DSR%");
+  const [password, setPassword] = useState("");
   const [passwordLength, setPasswordLength] = useState(6);
 
   const generatePassword = (passOptions: IOptions, length: number) => {
@@ -43,6 +44,12 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
         includeSymbols ? "(?=.*?[#?!@$ %^&*-])" : ""
       }.{${passwordLength}}`
     );
+
+    if (!includeLower && !includeNumbers && !includeSymbols && !includeUpper) {
+      toast.error("At least one options has to be chosen !");
+      return;
+    }
+
     while (temp.length < length) {
       if (includeLower) {
         const random = randomInt(lowerChars.length);
