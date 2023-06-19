@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+
   svg {
     font-size: 20px;
   }
@@ -17,4 +19,9 @@
     color: var(--color-white);
     margin-left: 10px;
   }
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--color-grey-hover);
 }
