@@ -15,7 +15,7 @@ export const ShowStrength: React.FC = () => {
 
   const { password } = useGlobalContext() as AppContextType;
 
-  console.log(document.querySelectorAll(".strength-container__item"));
+  /* console.log(document.querySelectorAll(".strength-container__item")); */
   return (
     <div className="strength-container">
       <div className="strength-container__label">
