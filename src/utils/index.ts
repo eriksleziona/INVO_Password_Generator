@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 export const randomInt = (max: number) => {
   return Math.floor(Math.random() * max);
 };
@@ -30,8 +28,8 @@ export const passwordStrength = (password: string): number => {
     conditionsMet++;
   }
 
-  if (conditionsMet === -1) {
-    return 0;
+  if (conditionsMet === -1 || conditionsMet === 0) {
+    return 1;
   }
   return conditionsMet;
 };
@@ -43,14 +41,4 @@ export const getStrengthClass = (passPower: number): string => {
   if (passPower >= 4) return "strength-container__item--success";
 
   return "";
-};
-
-export const usePreviousState = (value: string) => {
-  const ref = useRef<string>();
-
-  useEffect(() => {
-    ref.current = value;
-  }, [value]);
-
-  return ref.current;
 };
