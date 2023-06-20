@@ -47,6 +47,7 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
 
     if (!includeLower && !includeNumbers && !includeSymbols && !includeUpper) {
       toast.error("At least one options has to be chosen !");
+      setPassword("");
       return;
     }
 
