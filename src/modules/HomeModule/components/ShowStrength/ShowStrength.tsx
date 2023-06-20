@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ShowStrength.style.scss";
 import { useGlobalContext } from "@/context";
 import { AppContextType } from "@/context/Context.types";
-import { passwordStrength, getStrengthClass, usePreviousState } from "@/utils";
+import { passwordStrength, getStrengthClass } from "@/utils";
 const strengthMessages = [
   "Low password strength",
   "Low password strength",
@@ -12,7 +12,7 @@ const strengthMessages = [
 ];
 
 export const ShowStrength: React.FC = () => {
-  /* #TODO Implementing the show strength Func changing the Color of the Bars */
+  /* #TODO needs to be Refactored with better solutions. */
 
   const { password } = useGlobalContext() as AppContextType;
   const passwordPower = passwordStrength(password);
@@ -39,7 +39,6 @@ export const ShowStrength: React.FC = () => {
     <div className="strength-container">
       <div className="strength-container__label">
         <h4 className="strength-container__title">Strength</h4>
-        {/* #TODO Set the password power string dynamic */}
         <span className="strength-container__message">
           {strengthMessages[passwordPower]}
         </span>
