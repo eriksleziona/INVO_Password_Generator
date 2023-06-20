@@ -29,4 +29,16 @@
     height: 6px;
     background: var(--color-slider);
   }
+
+  & &__item--danger {
+    background-color: var(--color-red);
+  }
+
+  & &__item--warning {
+    background: var(--color-yellow);
+  }
+
+  & &__item--success {
+    background: var(--color-green);
+  }
 }
