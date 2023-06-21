@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 export const randomInt = (max: number) => {
   return Math.floor(Math.random() * max);
 };
@@ -27,6 +29,7 @@ export const passwordStrength = (password: string): number => {
   if (password.length >= 8) {
     conditionsMet++;
   }
+
 
   if (conditionsMet === -1 || conditionsMet === 0) {
     return 1;
