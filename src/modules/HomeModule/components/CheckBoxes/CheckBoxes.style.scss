@@ -1,6 +1,6 @@
 @import "/src/global-styles/Mixins/font.mixins.scss";
 .checkboxes-container {
-  padding-top: 28px;
+  padding-top: 34px;
 
   & &__row {
     display: flex;
@@ -12,7 +12,14 @@
     margin-top: 14px;
   }
 
-  & &__checkbox {
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    display: block;
+    border: 1px solid var(--color-stroke);
+  }
+
+  & &__checkbox:checked {
     /* #TODO Implement Custom checkboxes */
   }
 
