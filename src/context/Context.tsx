@@ -20,10 +20,10 @@ const AppContext = createContext<AppContextType | null>(null);
 
 export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
   const [options, setOptions] = useState({
-    includeSymbols: false,
+    includeSymbols: true,
     includeNumbers: true,
-    includeUpper: false,
-    includeLower: true,
+    includeUpper: true,
+    includeLower: false,
   });
 
   const [password, setPassword] = useState("");

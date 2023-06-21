@@ -3,6 +3,7 @@
   & &__label {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   & &__slider {
@@ -21,10 +22,11 @@
 
   & &__label-title {
     @include secondary-title-font-mixin;
-    align-items: center;
+    line-height: 20px;
   }
 
   & &__label-length {
+    align-items: start;
     @include title-font-mixins;
   }
 }
