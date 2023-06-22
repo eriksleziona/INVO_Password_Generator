@@ -30,7 +30,6 @@ export const passwordStrength = (password: string): number => {
     conditionsMet++;
   }
 
-
   if (conditionsMet === -1 || conditionsMet === 0) {
     return 1;
   }
