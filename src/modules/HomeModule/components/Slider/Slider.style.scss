@@ -7,13 +7,7 @@
   }
 
   & &__slider {
-    width: 100%; /* Full-width */
-    height: 4px; /* Specified height */
-    background: var(--color-slider); /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
-    transition: opacity 0.2s;
+    width: 100%;
   }
 
   & &__slider:hover {
@@ -28,5 +22,60 @@
   & &__label-length {
     align-items: start;
     @include title-font-mixins;
+  }
+
+  input[type="range"] {
+    cursor: pointer;
+    background-color: var(--color-slider);
+    background-image: -webkit-gradient(
+      linear,
+      50% 0%,
+      50% 100%,
+      color-stop(0%, var(--color-primary)),
+      color-stop(100%, var(--color-primary))
+    );
+    background-size: 16.666666666666668% 100%;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 4px;
+    border-radius: 90px;
+  }
+  input
+
+  /******** Firefox ********/
+  input[type="range"]::-moz-range-track {
+    background: var(--color-slider);
+    height: 4px;
+    border-radius: 90px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -8px; /* Centers thumb on the track */
+    background-color: var(--color-white);
+    opacity: 1;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
+      0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+    background: url("/public/Icon/slide-icon-2.png") no-repeat;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+  /******** Firefox ********/
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -8px; /* Centers thumb on the track */
+    background-color: var(--color-primary);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
   }
 }
