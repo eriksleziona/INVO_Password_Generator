@@ -12,6 +12,11 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--color-black);
   background: var(--color-background);
+
+  @media screen and (max-width: 832px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
 p {

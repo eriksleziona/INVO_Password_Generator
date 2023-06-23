@@ -4,9 +4,10 @@ import { useGlobalContext } from "@/context";
 import { AppContextType } from "@/context/Context.types";
 import { passwordStrength, getStrengthClass } from "@/utils";
 const strengthMessages = [
+  /* #TODO Stupid implemented but working :D Has to be Refactored  */
   "Low password strength",
   "Low password strength",
-  "Average password strength",
+  "Low password strength",
   "Average password strength",
   "High password strength",
 ];

@@ -22,6 +22,7 @@
     margin-top: 17px;
     display: flex;
     justify-content: space-between;
+    gap: 7px;
   }
   & &__item {
     border-radius: 90px;
@@ -40,5 +41,15 @@
 
   & &__item--success {
     background: var(--color-green);
+  }
+
+  @media screen and (max-width: 834px) {
+    padding: 12px 16px 16px 16px;
+    & &__item {
+      display: grid;
+      max-width: 179px;
+      width: 100%;
+      gap: 7px;
+    }
   }
 }

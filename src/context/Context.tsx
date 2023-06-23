@@ -30,8 +30,6 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
   const [passwordLength, setPasswordLength] = useState(6);
 
   const generatePassword = (passOptions: IOptions, length: number) => {
-    // #TODO implementing the Generate password function.
-
     const temp: string[] = [];
 
     const { includeLower, includeNumbers, includeSymbols, includeUpper } =

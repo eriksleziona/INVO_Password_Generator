@@ -19,6 +19,10 @@
     color: var(--color-white);
     margin-left: 10px;
   }
+  @media screen and (max-width: 832px) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .btn:hover {

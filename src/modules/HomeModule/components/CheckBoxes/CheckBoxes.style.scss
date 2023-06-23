@@ -1,22 +1,18 @@
 @import "/src/global-styles/Mixins/font.mixins.scss";
 .checkboxes-container {
   padding-top: 34px;
-
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
   & &__row {
     display: flex;
     flex-direction: row;
     gap: 12px;
   }
 
-  & &__row:not(:first-child) {
-    margin-top: 14px;
-  }
-
   input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    display: block;
-    border: 1px solid var(--color-stroke);
   }
 
   & &__checkbox:checked {
@@ -33,5 +29,10 @@
 
   & &__label:hover {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 832px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import "./Slider.style.scss";
 import { useGlobalContext } from "@/context";
 import { AppContextType } from "@/context/Context.types";
@@ -6,6 +6,16 @@ import { AppContextType } from "@/context/Context.types";
 export const Slider: React.FC = () => {
   const { passwordLength, setPasswordLength } =
     useGlobalContext() as AppContextType;
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const min = parseInt(e.target.min);
+    const max = parseInt(e.target.max);
+    const value = parseInt(e.target.value);
+    const bgSize = `${((value - min) * 100) / (max - min)}% 100%`;
+    e.target.style.backgroundSize = bgSize;
+    setPasswordLength(value);
+  };
+
   return (
     <div className="slider-container">
       <div className="slider-container__label">
@@ -16,9 +26,7 @@ export const Slider: React.FC = () => {
         className="slider-container__slider"
         type="range"
         value={passwordLength}
-        onChange={(e) => {
-          setPasswordLength(parseInt(e.target.value));
-        }}
+        onChange={handleChange}
         min={4}
         max={16}
       />
