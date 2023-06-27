@@ -13,9 +13,14 @@ body {
   color: var(--color-black);
   background: var(--color-background);
 
-  @media screen and (max-width: 832px) {
+  @media screen and (max-width: 834px) {
+    margin-top: 356px;
     margin-left: 16px;
     margin-right: 16px;
+  }
+
+  @media screen and (max-width: 478px) {
+    margin-top: 132px;
   }
 }
 
