@@ -11,16 +11,33 @@
   }
 
   input[type="checkbox"] {
-    width: 18px;
+    appearance: none;
+    -webkit-appearance: none;
     height: 18px;
-  }
-
-  & &__checkbox:checked {
-    /* #TODO Implement Custom checkboxes */
-  }
-
-  & &__checkbox:hover {
+    width: 18px;
+    border: 1px solid var(--color-stroke);
+    border-radius: 6px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 8px;
+    color: white;
+    display: none;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: var(--color-primary);
+  }
+
+  input[type="checkbox"]:checked::after {
+    display: block;
   }
 
   & &__label {

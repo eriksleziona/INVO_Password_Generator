@@ -8,9 +8,9 @@ export const Slider: React.FC = () => {
     useGlobalContext() as AppContextType;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const min = parseInt(e.target.min);
-    const max = parseInt(e.target.max);
-    const value = parseInt(e.target.value);
+    const min: number = parseInt(e.target.min);
+    const max: number = parseInt(e.target.max);
+    const value: number = parseInt(e.target.value);
     const bgSize = `${((value - min) * 100) / (max - min)}% 100%`;
     e.target.style.backgroundSize = bgSize;
     setPasswordLength(value);
