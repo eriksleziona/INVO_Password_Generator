@@ -1,4 +1,8 @@
 @import "../../../../global-styles/Mixins/font.mixins.scss";
 .form-container {
   margin-top: 30px;
+
+  @media screen and (max-width: 834px) {
+    margin-top: 19px;
+  }
 }
